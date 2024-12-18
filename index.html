@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Hologram Effect</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: radial-gradient(circle, #001a33, #000000);
+            font-family: Arial, sans-serif;
+        }
+        
+        #ui-panel {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 10px;
+            color: white;
+            z-index: 10;
+        }
+        
+        .ui-slider {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        
+        #audioInput {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="ui-panel">
+        <label for="colorPicker">Hologram Color:</label>
+        <input type="color" id="colorPicker" value="#00ffff"><br>
+        <label for="particleDensity">Particle Density:</label>
+        <input type="range" id="particleDensity" class="ui-slider" min="500" max="5000" value="2000"><br>
+        <label for="audioInput">Upload Audio:</label>
+        <input type="file" id="audioInput" accept="audio/*">
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
